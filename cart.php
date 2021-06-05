@@ -247,19 +247,19 @@ if(isset($_POST['form1'])) {
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check1.png" alt="Security policy (edit with Customer reassurance module)">
-                                                    <span>Security policy (edit with Customer reassurance module)</span>
+                                                    <span>Security policy (All the transactiions are secured with TRANSSAFE)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check2.png" alt="Delivery policy (edit with Customer reassurance module)">
-                                                    <span>Delivery policy (edit with Customer reassurance module)</span>
+                                                    <span>Delivery policy (100% on time delivey)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check3.png" alt="Return policy (edit with Customer reassurance module)">
-                                                    <span>Return policy (edit with Customer reassurance module)</span>
+                                                    <span>Return policy (You will get 100% refund if the product is damaged)</span>
                                                 </div>
                                             </li>
                                         </ul>
