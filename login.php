@@ -32,7 +32,7 @@ if(isset($_POST['form1'])) {
                 $error_message .= LANG_VALUE_139.'<br>';
             } else {
                 if($cust_status == 0) {
-                    $error_message .= LANG_VALUE_148.'<br>';
+                    $error_message .= LANG_VALUE_148.'<br>'; 
                 } else {
                     $_SESSION['customer'] = $row;
                     header("location: ".BASE_URL."dashboard.php");
