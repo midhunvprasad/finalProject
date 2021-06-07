@@ -196,7 +196,7 @@ if (isset($_POST['form1'])) {
                             </div>
                         </div>
                         <input type="submit" class="btn btn-primary" value="<?php echo LANG_VALUE_5; ?>" name="form1">
-                        <a href="checkout.php" class="btn btn-primary">Proceed to Checkout</a>
+                        <a href="checkout.php" class="btn btn-primary">Proceed to Checkout </a>
                     </form>
                         </div>
                     </div>
