@@ -34,7 +34,7 @@
                             <h1 class="text-center title-page">Contact Us</h1>
                             <div class="row-inhert">
                                 <div class="input-contact">
-                                    <p class="text-intro text-center">“Thank you for reaching out us, We'll be replying you ASAP!”
+                                    <p class="text-intro text-center">“Want to contact us? Send us your thoughts!”
                                     </p>
                                     
                                     <p class="icon text-center">
