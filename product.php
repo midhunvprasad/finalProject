@@ -523,12 +523,18 @@ if($success_message1 != '') {
 
                                                                         
                                                                         </div>
+                                                                        <?php if($p_qty == 0): ?>
+                                                                            <span class="add">
+                                                                              <div class="btn btn-sm">Out Of Stock</div>
+                                                                        </span>
+                                                                      
+                                                                        <?php else: ?>
                                                                         <span class="add">
                                                                               <input class="btn btn-sm" type="submit" value="<?php echo LANG_VALUE_154; ?>" name="form_add_to_cart">
 
                                                                          
                                                                         </span>
-
+                                                                          <?php endif; ?>
                                                                     </div>
                                                                 </div>
                                                             </div>
