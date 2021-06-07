@@ -291,8 +291,8 @@ foreach ($result as $row)
             <!-- Product -->
                                                         </div>
                                                         <div class="content-showmore text-center has-showmore">
-                                                            <button type="button" class="btn btn-default novShowMore" name="novShowMore" data-loading="Loading..." data-loadmore="Load More Products">
-                                                                <span>Load More Products</span>
+                                                             <a href="product-category.php?id=2&type=top-category" class="btn btn-default novShowMore">Load More Products</a>
+
                                                             </button>
                                                             <input type="hidden" value="0" class="count_showmore">
                                                         </div>
