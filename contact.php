@@ -34,9 +34,7 @@
                             <h1 class="text-center title-page">Contact Us</h1>
                             <div class="row-inhert">
                                 <div class="input-contact">
-                                    <p class="text-intro text-center">“Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin, lorem quis bibendum
-                                        auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
-                                        amet nibh vultate cursus a sit amet mauris. Proin gravida nibh vel velit auctor aliquet.”
+                                    <p class="text-intro text-center">“Thank you for reaching out us, We'll be replying you ASAP!”
                                     </p>
                                     
                                     <p class="icon text-center">
