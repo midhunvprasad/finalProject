@@ -253,7 +253,7 @@ if(isset($_POST['form1'])) {
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check2.png" alt="Delivery policy (edit with Customer reassurance module)">
-                                                    <span>Delivery policy (100% on time delivey)</span>
+                                                    <span>Delivery policy (100% on time delivery)</span>
                                                 </div>
                                             </li>
                                             <li>
