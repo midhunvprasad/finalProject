@@ -124,8 +124,6 @@ if(isset($_POST['form_add_to_cart'])) {
     if(isset($_SESSION['cart_p_id']))
     {
         $arr_cart_p_id = array();
-        $arr_cart_size_id = array();
-        $arr_cart_color_id = array();
         $arr_cart_p_qty = array();
         $arr_cart_p_current_price = array();
 
