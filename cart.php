@@ -117,33 +117,8 @@ if(isset($_POST['form1'])) {
                                                     $arr_cart_p_id[$i] = $value;
                                                 }
 
-                                                $i=0;
-                                                foreach($_SESSION['cart_size_id'] as $key => $value) 
-                                                {
-                                                    $i++;
-                                                    $arr_cart_size_id[$i] = $value;
-                                                }
+                                                
 
-                                                $i=0;
-                                                foreach($_SESSION['cart_size_name'] as $key => $value) 
-                                                {
-                                                    $i++;
-                                                    $arr_cart_size_name[$i] = $value;
-                                                }
-
-                                                $i=0;
-                                                foreach($_SESSION['cart_color_id'] as $key => $value) 
-                                                {
-                                                    $i++;
-                                                    $arr_cart_color_id[$i] = $value;
-                                                }
-
-                                                $i=0;
-                                                foreach($_SESSION['cart_color_name'] as $key => $value) 
-                                                {
-                                                    $i++;
-                                                    $arr_cart_color_name[$i] = $value;
-                                                }
 
                                                 $i=0;
                                                 foreach($_SESSION['cart_p_qty'] as $key => $value) 
@@ -217,7 +192,7 @@ if(isset($_POST['form1'])) {
                                                                 </div>
                                                                 <div class="col-md-2 col text-xs-right align-self-end">
                                                                     <div class="cart-line-product-actions ">
-                                                                        <a onclick="return confirmDelete();" href="cart-item-delete.php?id=<?php echo $arr_cart_p_id[$i]; ?>&size=<?php echo $arr_cart_size_id[$i]; ?>&color=<?php echo $arr_cart_color_id[$i]; ?>" class="remove-from-cart">
+                                                                        <a onclick="return confirmDelete();" href="cart-item-delete.php?id=<?php echo $arr_cart_p_id[$i]; ?>" class="remove-from-cart">
                                                                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                                         </a>
                                                                     </div>
@@ -247,19 +222,19 @@ if(isset($_POST['form1'])) {
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check1.png" alt="Security policy (edit with Customer reassurance module)">
-                                                    <span>Security policy (All the transactiions are secured with TRANSSAFE)</span>
+                                                    <span>Security policy (edit with Customer reassurance module)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check2.png" alt="Delivery policy (edit with Customer reassurance module)">
-                                                    <span>Delivery policy (100% on time delivery)</span>
+                                                    <span>Delivery policy (edit with Customer reassurance module)</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="block-reassurance-item">
                                                     <img src="assets/img/product/check3.png" alt="Return policy (edit with Customer reassurance module)">
-                                                    <span>Return policy (You will get 100% refund if the product is damaged)</span>
+                                                    <span>Return policy (edit with Customer reassurance module)</span>
                                                 </div>
                                             </li>
                                         </ul>
