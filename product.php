@@ -136,34 +136,10 @@ if(isset($_POST['form_add_to_cart'])) {
             $arr_cart_p_id[$i] = $value;
         }
 
-        $i=0;
-        foreach($_SESSION['cart_size_id'] as $key => $value) 
-        {
-            $i++;
-            $arr_cart_size_id[$i] = $value;
-        }
-
-        $i=0;
-        foreach($_SESSION['cart_color_id'] as $key => $value) 
-        {
-            $i++;
-            $arr_cart_color_id[$i] = $value;
-        }
 
 
-        $added = 0;
-        if(!isset($_POST['size_id'])) {
-            $size_id = 0;
-        } else {
-            $size_id = $_POST['size_id'];
-        }
-        if(!isset($_POST['color_id'])) {
-            $color_id = 0;
-        } else {
-            $color_id = $_POST['color_id'];
-        }
         for($i=1;$i<=count($arr_cart_p_id);$i++) {
-            if( ($arr_cart_p_id[$i]==$_REQUEST['id']) && ($arr_cart_size_id[$i]==$size_id) && ($arr_cart_color_id[$i]==$color_id) ) {
+            if( ($arr_cart_p_id[$i]==$_REQUEST['id']) ) {
                 $added = 1;
                 break;
             }
@@ -179,40 +155,10 @@ if(isset($_POST['form_add_to_cart'])) {
             }
             $new_key = $i+1;
 
-            if(isset($_POST['size_id'])) {
 
-                $size_id = $_POST['size_id'];
-
-                $statement = $pdo->prepare("SELECT * FROM tbl_size WHERE size_id=?");
-                $statement->execute(array($size_id));
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
-                foreach ($result as $row) {
-                    $size_name = $row['size_name'];
-                }
-            } else {
-                $size_id = 0;
-                $size_name = '';
-            }
-            
-            if(isset($_POST['color_id'])) {
-                $color_id = $_POST['color_id'];
-                $statement = $pdo->prepare("SELECT * FROM tbl_color WHERE color_id=?");
-                $statement->execute(array($color_id));
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
-                foreach ($result as $row) {
-                    $color_name = $row['color_name'];
-                }
-            } else {
-                $color_id = 0;
-                $color_name = '';
-            }
           
 
             $_SESSION['cart_p_id'][$new_key] = $_REQUEST['id'];
-            $_SESSION['cart_size_id'][$new_key] = $size_id;
-            $_SESSION['cart_size_name'][$new_key] = $size_name;
-            $_SESSION['cart_color_id'][$new_key] = $color_id;
-            $_SESSION['cart_color_name'][$new_key] = $color_name;
             $_SESSION['cart_p_qty'][$new_key] = $_POST['p_qty'];
             $_SESSION['cart_p_current_price'][$new_key] = $_POST['p_current_price'];
             $_SESSION['cart_p_name'][$new_key] = $_POST['p_name'];
@@ -225,40 +171,12 @@ if(isset($_POST['form_add_to_cart'])) {
     else
     {
 
-        if(isset($_POST['size_id'])) {
-
-            $size_id = $_POST['size_id'];
-
-            $statement = $pdo->prepare("SELECT * FROM tbl_size WHERE size_id=?");
-            $statement->execute(array($size_id));
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
-            foreach ($result as $row) {
-                $size_name = $row['size_name'];
-            }
-        } else {
-            $size_id = 0;
-            $size_name = '';
-        }
+         
         
-        if(isset($_POST['color_id'])) {
-            $color_id = $_POST['color_id'];
-            $statement = $pdo->prepare("SELECT * FROM tbl_color WHERE color_id=?");
-            $statement->execute(array($color_id));
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
-            foreach ($result as $row) {
-                $color_name = $row['color_name'];
-            }
-        } else {
-            $color_id = 0;
-            $color_name = '';
-        }
+        
         
 
         $_SESSION['cart_p_id'][1] = $_REQUEST['id'];
-        $_SESSION['cart_size_id'][1] = $size_id;
-        $_SESSION['cart_size_name'][1] = $size_name;
-        $_SESSION['cart_color_id'][1] = $color_id;
-        $_SESSION['cart_color_name'][1] = $color_name;
         $_SESSION['cart_p_qty'][1] = $_POST['p_qty'];
         $_SESSION['cart_p_current_price'][1] = $_POST['p_current_price'];
         $_SESSION['cart_p_name'][1] = $_POST['p_name'];
@@ -472,9 +390,7 @@ if($success_message1 != '') {
                                                                 <div id="item1" class="tab-pane fade active in show">
                                                                     <img src="assets/uploads/<?php echo $p_featured_photo; ?>" alt="img">
                                                                 </div>
-                                                                <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-                                                                    <i class="fa fa-expand"></i>
-                                                                </div>
+                                                                
                                                             </div>
                                                             <ul class="product-tab nav nav-tabs d-flex"><?php
                                                             $statement = $pdo->prepare("SELECT * FROM tbl_product_photo WHERE p_id=?");
